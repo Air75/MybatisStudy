@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.air.javase.mybatisstusy.dao.StudentDao">
+    <select id="selectStudents" resultType="com.air.javase.mybatisstusy.entity.Student">
+        SELECT * FROM student order by id
+    </select>
+    <insert id="insert">
+        insert into student values(#{id},#{name},#{email},#{age});
+    </insert>
+    <update id="update">
+        UPDATE 表名 SET 列名=值
+    </update>
+    <delete id="delete">
+        DELETE FROM 表名 WHERE 列名 = 值
+    </delete>
+</mapper>
